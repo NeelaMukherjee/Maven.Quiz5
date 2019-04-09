@@ -12,22 +12,30 @@ import java.util.Iterator;
     private ArrayList<SomeType> elements;
 
     public MyStack() {
-        throw new UnsupportedOperationException("Method not yet implemented");
+
+        elements = new ArrayList<>();
+
+        //throw new UnsupportedOperationException("Method not yet implemented");
     }
 
     public Boolean isEmpty() {
-        return null;
+
+        return elements.isEmpty();
     }
 
-    public void push(SomeType i) {
+    public void push(SomeType i) throws  IndexOutOfBoundsException{
+
+        elements.add(i);
     }
 
     public SomeType peek() {
-        throw new UnsupportedOperationException("Method not yet implemented");
+
+        return elements.get(elements.size()-1);
+        //throw new UnsupportedOperationException("Method not yet implemented");
     }
 
-    public SomeType pop() throws EmptyStackException
-    {
+    public SomeType pop() throws EmptyStackException{
+
         Integer len = elements.size();
 
         SomeType temp = elements.get(len - 1);
